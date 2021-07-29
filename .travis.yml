@@ -1,0 +1,10 @@
+sudo: required
+services:
+  - docker
+
+before_install: #pre-requisite
+  - docker build -t mary007/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run mary007/docker-react npm run test -- --coverage
+  
