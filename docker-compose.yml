@@ -13,14 +13,14 @@ services:
             #- /home/node/app/node_modules
             #- . :/home/node/app
 
-    test:
-        stdin_open: 'true'
-        environment:
+    #test:
+     #   stdin_open: 'true'
+      #  environment:
             - CHOKIDAR_USEPOLLING=true
-        build: 
-            context: .
-            dockerfile: Dockerfile.dev      
+       # build: 
+        #    context: .
+         #   dockerfile: Dockerfile.dev      
         #volumes:
             #- /home/node/app/node_modules
             #- . :/home/node/app
-        command: ["npm", "run", "test"]
+        #command: ["npm", "run", "test"]
